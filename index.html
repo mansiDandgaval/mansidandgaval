@@ -20,6 +20,10 @@
   <link rel="stylesheet" href="css/style.css" />
 
   <style>
+    html {
+      scroll-behavior: smooth !important;
+    }
+
     html,
     body,
     header,
@@ -37,18 +41,8 @@
       }
     }
 
-    .top-nav-collapse {
-      background-color: #82b1ff !important;
-    }
-
-    .navbar:not(.top-nav-collapse) {
-      background: transparent !important;
-    }
-
-    @media (max-width: 991px) {
-      .navbar:not(.top-nav-collapse) {
-        background: #82b1ff !important;
-      }
+    h1 {
+      /* text-shadow: 2px 2px 5px #000000; */
     }
 
     h5 {
@@ -174,9 +168,9 @@
   <!-- Main navigation -->
   <header>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Mansi Dandgaval</a>
+        <a class="navbar-brand" href="#intro">Mansi Dandgaval</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
           aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -184,16 +178,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                Home
-                <!-- <span class="sr-only">(current)</span> -->
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link ml-2"> About me </a>
+              <a class="nav-link ml-2" href="#about"> About me </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link ml-2" href="#"> Portfolio</a>
+              <a class="nav-link ml-2" href="#projects"> Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ml-2" href="#contact"> Contact</a>
             </li>
           </ul>
         </div>
@@ -201,8 +192,8 @@
     </nav>
     <!-- Navbar -->
     <!-- Full Page Intro -->
-    <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="
-          background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+    <div id="intro" class="view jarallax" data-jarallax='{"speed": 0.2}' style="
+          background-image: url('./img/projects/designP.png');
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center center;
@@ -215,18 +206,17 @@
           <div class="row">
             <!--Grid column-->
             <div class="col-md-12 white-text text-center">
-              <h1 class="display-3 mb-0 pt-md-5 pt-5 white-text font-weight-bold wow fadeInDown" data-wow-delay="0.3s">
+              <h1 class="display-3 mb-0 pt-md-5 pt-5 text-dark font-weight-bold wow fadeInDown" data-wow-delay="0.3s">
                 Mansi Dandgaval
-                <a class="indigo-text font-weight-bold"></a>
               </h1>
               <h5
-                class="text-uppercase pt-md-5 pt-sm-2 pt-5 pb-md-5 pb-sm-3 pb-5 white-text font-weight-bold wow fadeInDown"
+                class="text-uppercase pt-md-5 pt-sm-2 pt-5 pb-md-5 pb-sm-3 pb-5 text-dark font-weight-bold wow fadeInDown"
                 data-wow-delay="0.3s">
                 Web developer & graphic designer
               </h5>
               <div class="wow fadeInDown" data-wow-delay="0.3s">
-                <a class="btn btn-light-blue btn-lg btn-rounded">portfolio</a>
-                <a class="btn btn-indigo btn-lg btn-rounded">About me</a>
+                <a class="btn btn-dark btn-lg btn-rounded" href="#projects">portfolio</a>
+                <a class="btn btn-dark btn-lg btn-rounded" href="#about">About me</a>
               </div>
             </div>
             <!--Grid column-->
@@ -241,28 +231,38 @@
   </header>
   <!-- Main navigation -->
 
-
-  <div class="container">
-    <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
-      <div class="container my-5 z-depth-1">
+  <div class="container" id="about">
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="container my-5">
         <!--Section: Content-->
         <!-- <section class="dark-grey-text"> -->
         <div class="row pr-lg-5">
-          <div class="col-md-7 mb-4">
+          <div class="col-md-5 mb-4">
             <div class="view">
-              <img src="https://mdbootstrap.com/img/illustrations/graphics(4).png" class="img-fluid"
-                alt="smaple image" />
+              <img src="/img/projects/Mansi.png" class="img-fluid z-depth rounded-circle" alt="smaple image" />
             </div>
           </div>
-          <div class="col-md-5 d-flex align-items-center">
+          <div class="col-md-7 d-flex align-items-center">
             <div>
               <h3 class="font-weight-bold mb-4">About me</h3>
 
               <p>
-                Graduate student pursuing a Master's in Information Systems with robust software development and testing
-                background.
-                Proficient in UI/UX design, web development, and database management.
-                Strong communication skills and a flexible team player.
+                I'm a graduate student pursuing a Master's in Information Systems at Northeastern University, set to
+                graduate this December. With a strong background in Computer Engineering and a passion for all things
+                tech, I'm on the cusp of stepping into the professional world.
+
+
+                I bring a blend of technical proficiency and a user-centric approach to every project. My academic
+                journey has honed my skills in software development, database management, and UI/UX design. I have a
+                knack for solving complex problems while keeping the end user's experience at the forefront.
+
+
+                As I approach the transition from academia to industry, I'm eager to bring my dedication, adaptability,
+                and creativity to real-world challenges. Whether it's software development, testing, or creating
+                intuitive user interfaces, I'm ready to make a tangible impact.
+
+                
+                Let's connect, collaborate, and create innovative solutions together.
               </p>
 
               <!-- <button type="button" class="btn btn-orange btn-rounded mx-0">
@@ -278,58 +278,7 @@
   </div>
   <!-- </section> -->
 
-  <section>
-    <div class="container">
-      <h3 class="font-weight-bold text-center mb-4">Portfolio</h3>
-      <!--Grid row-->
-      <div class="row mb-5">
-        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-          <div class="view overlay">
-            <img src="https://mdbootstrap.com/img/Photos/Others/forest-sm.webp" class="img-fluid" alt="smaple image" />
-            <div class="mask flex-center rgba-red-light">
-              <p class="white-text">Light overlay</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-          <div class="view overlay zoom">
-            <img src="https://mdbootstrap.com/img/Photos/Others/forest-sm.webp" class="img-fluid hoverable"
-              alt="smaple image" />
-            <div class="mask flex-center rgba-red-slight">
-              <p class="white-text">
-                <a class="white-text" href="http://google.com">ggogle</a>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas distinctio rem, commodi possimus, veritatis veniam
-                praesentium doloribus provident error eos quos voluptatum.
-                Exercitationem perspiciatis animi voluptatum, culpa similique
-                itaque saepe?
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-          <div class="view overlay zoom">
-            <img src="https://mdbootstrap.com/img/Photos/Others/forest-sm.webp" class="img-fluid hoverable"
-              alt="smaple image" />
-            <div class="mask flex-center rgba-red-slight">
-              <p class="white-text">
-                <a class="white-text" href="http://google.com">ggogle</a>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas distinctio rem, commodi possimus, veritatis veniam
-                praesentium doloribus provident error eos quos voluptatum.
-                Exercitationem perspiciatis animi voluptatum, culpa similique
-                itaque saepe?
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="projects">
+  <section class="projects" id="projects">
     <div class="container my-5">
       <!-- Section: Block Content -->
       <section class="dark-grey-text">
@@ -357,18 +306,27 @@
                 </a>
               </div>
 
-              <a href="https://www.canva.com/design/DAFyhfLL6YI/heY-xmhfgpStOtkEYNTkTg/edit" class="btn-floating btn-action ml-auto mr-4 mdb-color"><i class="fas fa-chevron-right pl-1"></i></a>
+              <a href="https://www.canva.com/design/DAFyhfLL6YI/heY-xmhfgpStOtkEYNTkTg/edit"
+                class="btn-floating btn-action ml-auto unique-color-dark" target="_blank"
+                style="margin-right: 4rem !important"><i class="fab fa-figma pl-1"></i></a>
+
+              <a target="_blank"
+                href="https://www.canva.com/design/DAFybYD9NGc/0o67dXUtdct9w4Y4oRZQag/edit?ui=eyJHIjp7fX0"
+                class="btn-floating btn-action ml-auto mr-2 unique-color-dark"><i
+                  class="fas fa-chevron-right pl-1"></i></a>
 
               <div class="card-body">
-                <h4 class="card-title"> Bergdorf Goodman Design Exploration</h4>
+                <h4 class="card-title">
+                  Bergdorf Goodman Design Exploration
+                </h4>
                 <hr />
                 <p class="card-text text-muted font-weight-light">
-                  As a graduate student, my Bergdorf Goodman design project offered a transformative experience, deepening my understanding of high-end e-commerce design. By meticulously replicating the website's segment, I emphasized the importance of aesthetics and user-centric design, expanding my skill set for future endeavors.
-
-
-
-
-
+                  As a graduate student, my Bergdorf Goodman design project
+                  offered a transformative experience, deepening my
+                  understanding of high-end e-commerce design. By meticulously
+                  replicating the website's segment, I emphasized the
+                  importance of aesthetics and user-centric design, expanding
+                  my skill set for future endeavors.
                 </p>
               </div>
             </div>
@@ -388,22 +346,25 @@
               </div>
               <a target="_blank"
                 href="https://www.canva.com/design/DAFybYD9NGc/0o67dXUtdct9w4Y4oRZQag/edit?ui=eyJHIjp7fX0"
-                class="btn-floating btn-action ml-auto mr-5 mdb-color"><i class="fab fa-figma pl-1"></i></a>
+                class="btn-floating btn-action ml-auto mr-5 unique-color-dark" style="margin-right: 4rem !important"><i
+                  class="fab fa-figma pl-1"></i></a>
 
               <a target="_blank"
                 href="https://www.canva.com/design/DAFybYD9NGc/0o67dXUtdct9w4Y4oRZQag/edit?ui=eyJHIjp7fX0"
-                class="btn-floating btn-action ml-auto mr-1 mdb-color"><i class="fas fa-chevron-right pl-1"></i></a>
+                class="btn-floating btn-action ml-auto mr-2 unique-color-dark"><i
+                  class="fas fa-chevron-right pl-1"></i></a>
 
               <div class="card-body">
-                <h4 class="card-title"> Turbo Doc </h4>
+                <h4 class="card-title">Turbo Doc</h4>
                 <hr />
                 <p class="card-text text-muted font-weight-light">
-                  Turbo Doc App Prototype is a user-centric, interactive Figma prototype designed in such a way that
-                  patients access healthcare services
-                  and consult with medical professionals. This innovative application aims to bridge the gap between
-                  patients and healthcare providers,
-                  offering a seamless, user-friendly, and secure platform for virtual consultations and health
-                  management.
+                  Turbo Doc App Prototype is a user-centric, interactive Figma
+                  prototype designed in such a way that patients access
+                  healthcare services and consult with medical professionals.
+                  This innovative application aims to bridge the gap between
+                  patients and healthcare providers, offering a seamless,
+                  user-friendly, and secure platform for virtual consultations
+                  and health management.
                 </p>
               </div>
             </div>
@@ -416,27 +377,21 @@
     </div>
   </section>
 
-  <div class="container mt-5">
+  <div class="container mt-5" id="contact">
     <!--Section: Content-->
     <section class="dark-grey-text mb-5">
       <!-- Section heading -->
-      <h3 class="font-weight-bold text-center mb-4">Contact me</h3>
-      <!-- Section description -->
-      <p class="text-center w-responsive mx-auto pb-5">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error
-        amet numquam iure provident voluptate esse quasi, veritatis totam
-        voluptas nostrum quisquam eum porro a pariatur veniam.
-      </p>
+      <h3 class="font-weight-bold text-center my-5">Contact me</h3>
 
       <!-- Grid row -->
-      <div class="row">
+      <div class="row mt-3">
         <!-- Grid column -->
         <div class="col-lg-8 mb-lg-0 pb-lg-3 mb-4">
           <!-- Form with header -->
           <div class="card">
             <div class="card-body">
               <!-- Header -->
-              <div class="form-header blue accent-1">
+              <div class="form-header unique-color-dark accent-1">
                 <h3 class="mt-2">
                   <i class="fas fa-envelope"></i> Write to me:
                 </h3>
@@ -459,7 +414,9 @@
                 <label for="form-text">Send message</label>
               </div>
               <div class="text-center">
-                <button class="btn btn-light-blue">Submit</button>
+                <button class="btn white-text unique-color-dark">
+                  Submit
+                </button>
               </div>
             </div>
           </div>
@@ -467,20 +424,20 @@
         </div>
         <!-- Grid column -->
         <div class="col-md-4 text-center">
-          <a class="btn-floating blue accent-1">
+          <a class="btn-floating accent-1 unique-color-dark">
             <i class="fas fa-map-marker-alt"></i>
           </a>
-          <p>New York, 94126</p>
+          <p>Boston, MA, USA</p>
 
-          <a class="btn-floating blue accent-1 mt-2">
-            <i class="fas fa-phone"></i>
-          </a>
-          <p>+ 01 234 567 89</p>
+          <!-- <a class="btn-floating accent-1 mt-2 unique-color-dark">
+              <i class="fas fa-phone"></i>
+            </a>
+            <p>+ 01 234 567 89</p> -->
 
-          <a class="btn-floating blue accent-1 mt-2">
+          <a class="btn-floating accent-1 mt-2 unique-color-dark" href="mailto:dandgaval.m@northeastern.edu">
             <i class="fas fa-envelope"></i>
           </a>
-          <p>info@gmail.com</p>
+          <p>dandgaval.m@northeastern.edu</p>
         </div>
 
         <!-- Grid column -->
@@ -491,7 +448,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="page-footer font-small cyan darken-3">
+  <footer class="page-footer font-small bg-dark">
     <!-- Footer Elements -->
     <div class="container">
       <!-- Grid row-->
