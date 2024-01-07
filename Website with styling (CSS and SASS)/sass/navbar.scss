@@ -1,0 +1,57 @@
+ .navbar {
+	position: fixed; // fixed position has been applied
+	z-index: 1;
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #ffffff;
+	}
+
+	//nesting using sass
+	li {
+		float: left;
+		a {
+			margin-right: 5px;
+			font-size: 14px;
+			display: block;
+			color: #666;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			&:hover {
+				&:not(.active) {
+					color: rgb(0, 0, 0);
+				}
+			}
+			&:active {
+				color: rgb(127, 141, 204);
+			}
+		}
+	}
+}
+
+
+.img-fluid-logo {
+	margin-left: 10px;
+	height: auto;
+	width: 60%;
+}
+.savedSearches {
+	border: 1px dashed;
+	margin-left: 420px;
+	 
+	border-radius: 2.5rem;
+}
+.img-notification {
+	height: auto;
+	margin-left: 10px;
+	 
+	padding: 10ch;
+	width: 25%;
+}
+
+.float-right {
+	float: right;
+}

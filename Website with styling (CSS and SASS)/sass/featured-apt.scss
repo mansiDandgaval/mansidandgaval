@@ -1,0 +1,112 @@
+.featuredApartment h1 {
+  color: #2b4c6b;
+}
+
+//for the featured apartments
+@mixin card {
+  height: 235px;
+  width: 197px;
+  // z-index: 0.1;
+  border-radius: 0rem;
+  position: absolute;
+  -webkit-box-shadow: 1px 2px 9px -2px #000000;
+  box-shadow: 1px 2px 9px -2px #000000;
+  background-color: white;
+  padding: 0px 30px 330px 30px;
+}
+
+.london-apt {
+  @include card; //uses mixin card
+  margin-top: 80px;
+  margin-left: 47px;
+}
+
+.belmont-apt {
+  @include card; //uses mixin card
+  margin-top: 80px;
+  margin-left: 460px;
+}
+
+.timber-apt {
+  @include card; //uses mixin card
+  margin-top: 80px;
+  margin-left: 871px;
+}
+
+.featuredApartment {
+  padding: 50px 50px 650px 50px;
+}
+
+.img-fluid-apt-london {
+  height: 57%;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.img-fluid-apt-timber {
+  height: 57%;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.img-fluid-apt-belmont {
+  height: 57%;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.img-fluid-apt-man {
+  height: 14%;
+  width: 17%;
+  position: relative;
+  top: -22px;
+  right: -154px;
+  -webkit-box-shadow: 1px 2px 9px -2px #dfd7d7;
+  box-shadow: 1px 2px 9px -2px #d6f4f7;
+}
+
+.img-fluid-apt-man-1 {
+  height: 14%;
+  width: 17%;
+  position: relative;
+  top: -22px;
+  right: -154px;
+  -webkit-box-shadow: 1px 2px 9px -2px #dfd7d7;
+  box-shadow: 1px 2px 9px -2px #d6f4f7;
+}
+
+.for-rent {
+  background-color: rgb(138, 204, 39);
+  color: azure;
+  height: 20px;
+  width: 59px;
+  position: relative;
+  top: 82px;
+  right: -128px;
+}
+
+.km-away {
+  background-color: rgb(109, 112, 105);
+  opacity: 0.9;
+  color: rgb(255, 255, 255);
+  height: 20px;
+  width: 87px;
+  position: relative;
+  top: 46px;
+  right: -8px;
+  border-radius: 0.5rem;
+}
+
+.location {
+  position: relative;
+  top: 0px;
+  right: 43px;
+  height: 27px;
+  width: 20px;
+}
+//figure caption
+.fig-cap {
+  position: relative;
+  top: -28px;
+  right: -30px;
+}

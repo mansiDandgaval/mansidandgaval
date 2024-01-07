@@ -1,0 +1,39 @@
+.apartmentPlans ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* border: 1px solid #e7e7e7; */
+   
+  }
+  
+  .apartmentPlans li {
+    float: left;
+  }
+  
+  .apartmentPlans li a {
+    font-size: 21px;
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  // change color to blue when hovers
+  .apartmentPlans li a:hover:not(.active) {
+    color: rgb(0, 0, 0);
+  }
+  
+  .apartmentPlans li a.active {
+    color: rgb(127, 141, 204);
+  }
+
+  .apartmentPlans h1 {
+      color: #2b4c6b;
+  }
+  
+  //style applied for 2 sections 
+.combined-sections {
+  background-color:#f4f7fa;
+  padding: 25px;
+}

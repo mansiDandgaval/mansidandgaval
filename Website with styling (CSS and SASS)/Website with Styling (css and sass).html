@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 4-Web Design and User Experience Engineering</title>
+    <link rel="stylesheet" href="./dist/main.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- The Navigation section starts here-->
+
+    <section class="navbar">
+      <nav>
+        <div>
+          <ul>
+            <li>
+              <img
+                class="img-modern-logo"
+                src="./assets/photos/Modernlogo.png"
+                alt="Logo of Modern"
+              />
+            </li>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#featured">Featured</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+            <ul class="float-right">
+              <li>
+                <input
+                  class="savedSearches mt-2"
+                  placeholder="saved searches"
+                />
+              </li>
+              <li>
+                <span class="material-icons"> notifications </span>
+
+                <!-- <a href="#notifications"><img class="img-notification" src="./assets/photos/notification.jpg" alt="notification icon"></a> -->
+              </li>
+              <li><button>Login</button></li>
+            </ul>
+          </ul>
+        </div>
+      </nav>
+    </section>
+
+    <!-- The Navigation section ends here-->
+
+    <!--Banner section starts here-->
+
+    <section class="Banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <div class="lets-find">
+              <h1>
+                Let's Find <br />
+                Yours Dream..
+              </h1>
+
+              <strong>
+                Building award winning properties <br />
+                across London Uk and the All world
+              </strong>
+            </div>
+
+            <!--Form to Buy, Sell and Rent-->
+            <div class="buttons-exclude">
+              <button selected>Buy</button>
+              <button class="button-white">Sell</button>
+              <button class="button-white">Rent</button>
+            </div>
+            <div class="buy-sell-rent">
+              <form class="mt-3">
+                <div>
+                  <input placeholder="City/Street " required />
+                  <label>Apartment Type</label>
+                  <label>Price Range</label>
+                </div>
+
+                <div>
+                  <button><b> Enter City </b></button>
+                  <select>
+                    <option>The Studion</option>
+                    <option selected>Deluxe Portion</option>
+                    <option>Penthouse</option>
+                    <option>Top Garden</option>
+                    <option>Double Height</option>
+                  </select>
+                  <select>
+                    <option selected>Min price-Max price</option>
+                    <option>Max price-Min price</option>
+                  </select>
+                  <button>+ Advanced Filter</button>
+                  <button><b>Search</b></button>
+                </div>
+              </form>
+            </div>
+
+            </div>
+            <div class="col-5">
+              <img
+                class="img-fluid-banner float-right"
+                src="./assets/photos/apartment.png"
+                alt="apartment image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Banner section ends here-->
+    <br />
+    <!--Select Apartments section starts here-->
+
+    <section class="selectApartments">
+      <div class="container">
+        <center>
+          <p class="heading">HI, What do You want to your</p>
+          <p class="drm-title">Dream Apartment</p>
+          <p class="heading-caption">Select Apartment type below to begin</p>
+        </center>
+
+        <div class="row">
+          <div class="col-4">
+            <img
+              class="img-fluid-apt"
+              src="./assets/photos/Deluxe portion.jpeg"
+              alt="Deluxe Portion Apartment image"
+            />
+            <br>
+            <span class="mll-5">Deluxe Portion</span>
+            <input type="checkbox" checked />
+          </div>
+          <div class="col-4">
+            <img
+              class="img-fluid-apt"
+              src="./assets/photos/double height.jpeg"
+              alt="Double height Apartment image"
+            />
+            <br>
+            <span class="mll-5">Deluxe Portion</span>
+            <input type="checkbox"/>
+          </div>
+          <div class="col-4">
+            <img
+              class="img-fluid-apt"
+              src="./assets/photos/Apartment1.png"
+              alt="Penthouse Apartment image"
+            />
+            <br>
+            <span class="mll-5">Deluxe Portion</span>
+            <input type="checkbox"/>
+          </div>
+          <div class="col-4">
+            <img
+              class="img-fluid-apt"
+              src="./assets/photos/studio.jpeg"
+              alt="The Studio Apartment Image"
+            />
+            <br>
+            <span class="mll-5">Deluxe Portion</span>
+            <input type="checkbox"/>
+          </div>
+        </div>
+
+        <!--Checkboxes to select Apartment Type-->
+      </div>
+    </section>
+    <!--Select Apartments section ends here-->
+
+    <!--Featured Apartments section starts here-->
+
+    <section class="featuredApartment">
+      <!--Featured Apartments to buy,sell and Rent with brief description-->
+
+      <div class="container">
+        <center>
+          <button><b>Continue</b></button>
+          <p class="heading">Featured Apartments</p>
+          <p class="heading-caption">
+            The most frequently searched and most popular apartment of the
+            application will be in the list
+          </p>
+        </center>
+
+        <div class="row">
+          <div class="col-3 london-apt">
+            <p class="for-rent">For Rent</p>
+            <p class="km-away">1.2 km away</p>
+            <img
+              class="img-fluid-apt-london"
+              src="./assets/photos/London Apartment.png"
+              alt="London Apartment photo"
+            />
+            <img
+              class="img-fluid-apt-man"
+              src="./assets/photos/manwithphn.png"
+              alt="apartment owner"
+            />
+            <img class="location" src="./assets/photos/location.png"
+            alt = "location icon">
+            <figcaption class="fig-cap">Knightsbridge</figcaption>
+            <p>
+              <strong class="prime">$2,500</strong><br>
+              <b>London Apartment</b><br>
+              Beautiful Huge 1 Family House In Heart Of Westbury Newly Renovated
+              With New Furniture<br>
+              <img src="./assets/photos/bed.png" alt="bed image" />
+              <img src="./assets/photos/bathtub.png" alt="bathtub image" />
+              <label><strong>1776</strong></label><br>
+              2 Bedrooms 2Bathrooms Square Ft.
+            </p>
+          </div>
+          <div class="col-3 belmont-apt">
+            <p class="for-rent">For Sell</p>
+            <p class="km-away">1.2 km away</p>
+            <img
+              class="img-fluid-apt-belmont"
+              src="./assets/photos/studio apartment.png"
+              alt="Studio Apartment photo"
+            />
+            <img
+              class="img-fluid-apt-man-1"
+              src="./assets/photos/man2.jpeg"
+              alt=" apartment owner"
+            />
+            <img class="location" src="./assets/photos/location.png"
+            alt = "location icon">
+            <p>
+            <figcaption class="fig-cap">Belmont Gardens,Chicago</figcaption>
+            <p>
+              <strong class="prime">$30000</strong><br>
+              <b>Studio Apartment</b><br>
+              Beautiful Huge 1 Family House In Heart Of Westbury Newly Renovated
+              With New Furniture<br>
+              <img src="./assets/photos/bed.png" alt="bed image" />
+              <img src="./assets/photos/bathtub.png" alt="bathtub image" />
+              <label><strong>2500</strong></label><br>
+              3 Bedrooms 2Bathrooms Square Ft.
+            </p>
+          </div>
+          <div class="col-3 timber-apt" >
+            <p class="for-rent">For Rent</p>
+            <p class="km-away">1.2 km away</p>
+            <img
+              class="img-fluid-apt-timber"
+              src="./assets/photos/gillard homes apartment.png"
+              alt="Galliard Homes Apartment photo"
+            />
+            <img
+              class="img-fluid-apt-man-1"
+              src="./assets/photos/man1.jpeg"
+              alt="apartment owner"
+            />
+            <img class="location" src="./assets/photos/location.png"
+            alt = "location icon">
+            <p>
+            <figcaption class="fig-cap">Timber Yard, Birmingham City Centre, BS</figcaption>
+
+            <p>
+              <strong class="prime">$379,000</strong><br>
+              <b>Galliard Homes Apartment</b><br>
+              The Fabulous Two Bedroom Duplex Apartment Will Be Close To Some Of
+              The Best Local Haunts Venue The City Has To Offer.<br>
+              <img src="./assets/photos/bed.png" alt="bed image" />
+              <img src="./assets/photos/bathtub.png" alt="bathtub image" />
+              <label><strong>1041</strong></label><br>
+              2 Bedrooms 1Bathrooms Square Ft.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Featured Apartments section ends here-->
+
+    <!-- Apartment Plan Section starts here -->
+
+    <section class="combined-sections">
+
+    <section class="apartmentPlans">
+      <!--Select Apartment Plans, Here the Apartment Plan for Deluxe Portion is Selected-->
+      <h1><center>Apartment Plan</center></h1>
+      <div class="ml-5">
+        <ul>
+          <li><a href="#the studio">The Studio</a></li>
+          <li><a href="#deluxe portion" class="active">Deluxe Portion</a></li>
+          <li><a href="#penthouse">Penthouse</a></li>
+          <li><a href="#top garden">Top Garden</a></li>
+          <li><a href="#double height">Double Height</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Apartment Plan Section ends here -->
+
+    <!-- Deluxe Portion Section starts here -->
+    <section class="deluxePortion">
+      <div class="container">
+        <div class="row bg-white">
+          <div class="col-6 bg-blue">
+            <p class="bigger">
+              Deluxe Portion
+              <br />
+              Boasting chic interiors, three private balconies and a remarkable
+              terrace,
+              <br />
+              this two bedroom apartment will epitomise complete luxury. Not
+              only will
+              <br />
+              residents benefit from a superb location in the heart of
+              Shoreditch, but
+              <br />
+              they will also enjoy unrivalled facilities and a 24-hour bespoke
+              concierge.
+            </p>
+            <p class="smaller">
+              Total Area
+              ...........................................................................
+              2800 Sq. Ft
+              <br />
+              Bedroom
+              ............................................................................
+              2800 Sq. Ft
+              <br />
+              Bathroom
+              ............................................................................
+              2800 Sq. Ft
+              <br />
+              Smoking/ pets
+              ....................................................................
+              2800 Sq. Ft
+              <br />
+              Lounge
+              ................................................................................
+              2800 Sq. Ft
+            </p>
+          </div>
+          <div class="col-7">
+            <div class="deluxe_portion">
+              <img
+                class="img-plan center"
+                src="./assets/photos/plan.png"
+                alt="Apartment plan of Deluxe Portion"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+    <!-- Deluxe Portion Section ends here -->
+
+    <!-- Dream Apartment section starts here  -->
+
+    <section class="dreamApartment">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 sell-dream-apt">
+            <p class="buy-dream-apt">
+              Buy Dream Apartment
+              <br>
+              In<strong class="prime"> Prime Location</strong>
+            </p>
+            <button>Sell All Apartments</button>
+          </div>
+          <div class="col-5">
+           
+              <img
+                class="img-fluid-apt-dots"
+                src="./assets/photos/dots.png"
+                alt="design"
+              />
+              <img
+                class="img-fluid-apt-dream"
+                src="./assets/photos/Apartment1.png"
+                alt="Apartment photo"
+              />
+              <video class="vc" controls>
+                <source src="./assets/photos/video.png" type="video/webm" />
+                Sorry, your browser doesn't support embedded videos.
+              </video>
+            
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </section>
+
+    <!-- Dream Apartment section ends here  -->
+
+    <!-- Footer Starts here -->
+
+    <section class="footer">
+      <!--Some Useful links of the Modern Apartments with their social media handles-->
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <article>
+              <img
+                class="img-modern-logo-footer"
+                src="assets/photos/Modernlogo.png"
+                alt="Logo of Modern"
+              />
+              <pre>
+      The most beautiful exclusive 
+      properties and luxury apartments</pre
+              >
+            </article>
+            <nav>
+              <a href="#"
+                ><img
+                  src="./assets/photos/facebooklogo.png"
+                  alt="Facebook Logo"
+              /></a>
+              <a href="#"
+                ><img src="./assets/photos/twitterlogo.png" alt="Twitter Logo"
+              /></a>
+              <a href="#"
+                ><img src="./assets/photos/instalogo.png" alt="Instagram Logo"
+              /></a>
+              <a href="#"
+                ><img
+                  src="./assets/photos/telegramlogo.png"
+                  alt="Telegram Logo"
+              /></a>
+            </nav>
+          </div>
+          <div class="col-3">
+            <ol>
+              <a class="mt-2" href="#useful"><b>Useful links</b></a>
+              <br />
+              <a class="mt-2" href="#about">About</a
+              ><br />
+              <a class="mt-2" href="#patners">Patners</a
+              ><br />
+              <a class="mt-2" href="#contact">Contact</a>
+            </ol>
+          </div>
+          <div class="col-3">
+            <ul>
+              <a class="mt-2" href="#help"><b>Help?</b></a>
+              <br />
+              <a class="mt-2" href="#FAQ">FAQ</a
+              ><br />
+              <a class="mt-2" href="#t&c">Terms & Condition</a
+              ><br />
+              <a class="mt-2" href="#policy">Policy</a
+              ><br />
+              <a class="mt-2" href="#privacy">Privacy</a
+              ><br />
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      
+    </section>
+    <footer class="copyright"><em class="copyright-text"> @ Copyright 2021, modern.com </em></footer>
+
+    <!-- Footer Section Ends here  -->
+  </body>
+</html>
