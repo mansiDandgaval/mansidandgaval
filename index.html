@@ -20,15 +20,15 @@
   <link rel="stylesheet" href="css/style.css" />
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
-      (function() {
-          // https://dashboard.emailjs.com/admin/account
-          emailjs.init('JGIIsthm8eNe_QkkS');
-      })();
+    (function () {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init('JGIIsthm8eNe_QkkS');
+    })();
   </script>
 
-<script>
+  <script>
 
-  function sendmail(params) {
+    function sendmail(params) {
       // Get input values
       var toName = document.getElementById("toName").value;
       var fromName = document.getElementById("fromName").value;
@@ -36,31 +36,31 @@
       var alerterr = document.getElementById("alerterr");
       // Validate input
       if (!toName || !fromName || !msg) {
-          alerterr.innerHTML = "Please fill in all fields.";
-          alerterr.style.backgroundColor = "#FFC0CB"; // Light pink background for error
-          alerterr.style.display = "block";
-          return;
+        alerterr.innerHTML = "Please fill in all fields.";
+        alerterr.style.backgroundColor = "#FFC0CB"; // Light pink background for error
+        alerterr.style.display = "block";
+        return;
       }
       var tempParams = {
-          to_name: toName,
-          from_name: fromName,
-          message: msg,
+        to_name: toName,
+        from_name: fromName,
+        message: msg,
       };
 
-      
+
       emailjs.send('service_0qb8k0m', "template_g1utmhp", tempParams).then(function (res) {
-         // Show success message
-          alerterr.innerHTML = "Email sent successfully!";
-          alerterr.style.backgroundColor = "#90EE90"; // Light green background for success
-          alerterr.style.display = "block";
-          document.getElementById("toName").value = "";
-          document.getElementById("fromName").value = "";
-          document.getElementById("msg").value = "";
-          console.log("success", res.status);
+        // Show success message
+        alerterr.innerHTML = "Email sent successfully!";
+        alerterr.style.backgroundColor = "#90EE90"; // Light green background for success
+        alerterr.style.display = "block";
+        document.getElementById("toName").value = "";
+        document.getElementById("fromName").value = "";
+        document.getElementById("msg").value = "";
+        console.log("success", res.status);
       })
-  }
-  
-</script>
+    }
+
+  </script>
 
   <style>
     html {
@@ -202,49 +202,49 @@
       margin-bottom: -1.44rem;
     }
 
-    #alerterr
-    {
-        display: none;
+    #alerterr {
+      display: none;
     }
 
     .alert2 {
-    color: #383d41;
-    border-color: #d6d8db;
-    position: relative;
-    padding: 0.75rem 1.25rem;
-    margin-bottom: 1rem;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
-}
+      color: #383d41;
+      border-color: #d6d8db;
+      position: relative;
+      padding: 0.75rem 1.25rem;
+      margin-bottom: 1rem;
+      border: 1px solid transparent;
+      border-radius: 0.25rem;
+    }
 
-.card-wrapper .avatar img {
-    width: 100%;
-    background: none repeat scroll 0 0 #fff;
-    border: 5px solid #fff;
-}
-
-
-.card-wrapper .avatar {
-    display: block;
-    width: 120px;
-    margin-top: -60px;
-    overflow: hidden;
-}
-
-.img-fluid, .modal-dialog.cascading-modal.modal-avatar .modal-header, .video-fluid {
-    max-width: 100%;
-    height: auto;
-}
-.rounded-circle {
-    border-radius: 50%!important;
-}
-
-.card-wrapper .card-up {
-    height: 200px;
-    overflow: hidden;
-}
+    .card-wrapper .avatar img {
+      width: 100%;
+      background: none repeat scroll 0 0 #fff;
+      border: 5px solid #fff;
+    }
 
 
+    .card-wrapper .avatar {
+      display: block;
+      width: 150px;
+      margin-top: -80px;
+      overflow: hidden;
+    }
+
+    .img-fluid,
+    .modal-dialog.cascading-modal.modal-avatar .modal-header,
+    .video-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .rounded-circle {
+      border-radius: 50% !important;
+    }
+
+    .card-wrapper .card-up {
+      height: 200px;
+      overflow: hidden;
+    }
   </style>
 </head>
 
@@ -280,50 +280,110 @@
     </nav>
     <!-- Navbar -->
     <!-- Full Page Intro -->
-    <div id="intro" class="view jarallax" data-jarallax='{"speed": 0.2}' style="
-          background-image: url('./img/projects/designP.png');
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center center;
-        ">
-      <!-- Mask & flexbox options-->
-      <div class="mask rgba-white-light d-flex justify-content-center align-items-center">
-        <!-- Content -->
-        <div class="container">
-          <!--Grid row-->
+
+
+    <div>
+      <div class="container my-5 ">
+        <!--Section: Content-->
+        <section class="text-center dark-grey-text">
+          <!-- Grid row -->
           <div class="row">
-            <!--Grid column-->
-            <div class="col-md-12 white-text text-center">
-              <h1 class="display-3 mb-0 pt-md-5 pt-5 text-dark font-weight-bold wow fadeInDown" data-wow-delay="0.3s">
-                Mansi Dandgaval
-              </h1>
-              <h5
-                class="text-uppercase pt-md-5 pt-sm-2 pt-5 pb-md-5 pb-sm-3 pb-5 text-dark font-weight-bold wow fadeInDown"
-                data-wow-delay="0.3s">
-                Frontend Developer & UI/UX designer
-              </h5>
-              <div class="wow fadeInDown" data-wow-delay="0.3s">
-                <a class="btn btn-dark btn-lg btn-rounded" href="#projects">Projects</a>
-                <a class="btn btn-dark btn-lg btn-rounded" href="#about">About me</a>
+            <!-- Grid column -->
+            <div class="col-lg col-md-12 mb-4">
+              <!-- Rotating card -->
+              <div class="card-wrapper">
+                <div id="card-3" class="card card-rotating text-center">
+                  <!-- Front Side -->
+                  <div class="face front">
+                    <!-- Image -->
+                    <div class="card-up">
+                      <img class="card-img-top" src="./img/projects/designP.png" alt="Team member card image" />
+                    </div>
+                    <!-- Avatar -->
+                    <div class="avatar mx-auto white">
+                      <img src="/img/projects/Mansi.png" class="rounded-circle img-fluid"
+                        alt="Third sample avatar image" />
+                    </div>
+                    <!-- Content -->
+                    <div class="card-body pb-0">
+                      <h4 class="font-weight-bold mt-1 mb-3">Mansi Dandgaval</h4>
+                      <p class="font-weight-bold dark-grey-text">
+                        Front-end Developer & UI/UX Designer
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Front Side -->
+                  <!-- Back Side -->
+                  <div class="face back">
+                    <!-- Content -->
+                    <div class="card-body pt-0">
+                      <!-- Content -->
+
+                      <hr />
+                      <p>
+                        With a Master's in Information Systems from Northeastern University and a strong background in
+                        Computer Engineering, I bring extensive experience as a web developer, encompassing coding
+                        proficiency, QA expertise, and UI/UX design skills. My academic journey has honed my abilities
+                        in software development, database management, and creating intuitive user interfaces. As I
+                        transition from academia to industry, I am poised to leverage my dedication, adaptability, and
+                        creativity to make a tangible impact in real-world challenges. Whether it's software
+                        development, testing, or crafting user-centric designs, I am ready to connect, collaborate, and
+                        create innovative solutions.
+                      </p>
+                      <hr />
+                      <!-- Social Icons -->
+                      <ul class="list-inline list-unstyled">
+                        <li class="list-inline-item">
+
+                          <a href="https://www.linkedin.com/in/mansi-dandgaval/" target="_blank"
+                            class="li-ic  p-2 fa-lg">
+                            <i class="fab fa-linkedin-in fa-2x text-muted mr-md-5 mr-4 ">
+                            </i>
+
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="https://github.com/mansiDandgaval/" target="_blank" class="ins-ic  p-2 fa-lg">
+                            <i class="fab fa-github fa-2x text-muted mr-md-5 mr-4 ">
+                            </i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="https://dribbble.com/mansi_dandgaval" target="_blank" class="pin-ic  p-2 fa-lg">
+                            <i class="fab fa-dribbble fa-2x text-muted "> </i>
+                          </a>
+                        </li>
+
+                      </ul>
+
+
+                      <!--Git-->
+
+                      <!--Dribbble-->
+
+
+                    </div>
+                  </div>
+                  <!-- Back Side -->
+                </div>
               </div>
+              <!-- Rotating card -->
             </div>
-            <!--Grid column-->
+            <!-- Grid column -->
           </div>
-          <!--Grid row-->
-        </div>
-        <!-- Content -->
+          <!-- Grid row -->
+        </section>
+        <!--Section: Content-->
       </div>
-      <!-- Mask & flexbox options-->
     </div>
+
     <!-- Full Page Intro -->
   </header>
   <!-- Main navigation -->
 
-  <div class="container" id="about">
+  <!-- <div class="container" id="about">
     <div class="d-flex justify-content-center align-items-center">
       <div class="container my-5">
-        <!--Section: Content-->
-        <!-- <section class="dark-grey-text"> -->
         <div class="row pr-lg-5">
           <div class="col-md-5 mb-4">
             <div class="view">
@@ -344,39 +404,80 @@
                 am ready to connect, collaborate, and create innovative solutions.
               </p>
 
-              <!-- <button type="button" class="btn btn-orange btn-rounded mx-0">
-                    Download
-                  </button> -->
+
             </div>
           </div>
         </div>
-        <!-- </section> -->
-        <!--Section: Content-->
       </div>
     </div>
-  </div>
-  <!-- </section> -->
+  </div> -->
 
-  <section class="projects" id="projects">
+  <section class="projects mb-5 pt-5 " id="projects">
     <div class="container my-5">
       <!-- Section: Block Content -->
       <section class="dark-grey-text">
         <h3 class="text-center font-weight-bold mb-4 pb-2">
           My best projects
         </h3>
-        
-            
 
-        <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/jXuv1fZZHiM?si=guleicVN4yXqOjGM&amp;controls=0"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-        <p class="text-center text-muted w-responsive mx-auto mb-5">
-          From a transformative Bergdorf Goodman design project to the user-centric Turbo Doc App Prototype, my work
-          exemplifies a dedication to high-end e-commerce design and bridging the gap in healthcare through innovative,
-          secure, and user-friendly solutions
-        </p>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card"> <iframe height="300px"
+                src="https://www.youtube.com/embed/jXuv1fZZHiM?si=guleicVN4yXqOjGM&amp;controls=0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+
+              <div class="card-body">
+                <h4 class="card-title">Musik App- Product Design</h4>
+                <hr />
+                <p class=" card-text text-muted font-weight-light ">
+                  Revamped the Musik app with a user-centric design, meeting the requirement to incorporate a lyrics
+                  screen. Witness the seamless integration of the new design, maintaining a consistent color theme and
+                  employing high-fidelity prototypes.
+                </p>
+                <hr>
+                <a target="_blank"
+                  class="nav-link text-dark rounded-pill z-depth-2 waves-effect waves-light mx-2 font-weight-bold"
+                  href="https://dribbble.com/shots/23314720-Accenture-North-America-Product-Design-virtual-experience?utm_source=Clipboard_Shot&utm_campaign=mansi_dandgaval&utm_content=Accenture%20North%20America%20Product%20Design%20virtual%20experience&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=mansi_dandgaval&utm_content=Accenture%20North%20America%20Product%20Design%20virtual%20experience&utm_medium=Social_Share"
+                  role="button">dribbble<i class="fab fa-dribbble pl-3 fa-lg font-weight-light"></i></a>
+                  <a target="_blank"
+                  class="nav-link text-dark rounded-pill z-depth-2 waves-effect waves-light font-weight-bold"
+                  href="https://www.canva.com/design/DAF3wnn-wZc/gxhPPNZBgUelWgYYtMfG8w/edit?utm_content=DAF3wnn-wZc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" role="button">Canva <i
+                    class="fas fa-chevron-right pl-3 fa-lg "></i></a>
+                </hr>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card"> <iframe height="300px"
+                src="https://www.youtube.com/embed/6SI2_V9zOz8?si=0u6w9fM6KF9pz0ps" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+
+              <div class="card-body">
+                <h4 class="card-title">Agent Bene- Game </h4>
+                <hr />
+                <p class=" card-text text-muted font-weight-light ">
+                  This video shows the game's initial stage of development, focusing on its foundational design phase.
+                  Agent Bene represents the initial stage of development, currently in progress. This provides a broad
+                  overview of the envisioned game concept.
+                </p>
+                <hr>
+                <a target="_blank"
+                  class="nav-link text-dark rounded-pill z-depth-2 waves-effect waves-light mx-2 font-weight-bold"
+                  href="https://mansi-dandgaval.itch.io/agent-bene" role="button">itch.io<i
+                    class="fab fa-itch-io pl-3 fa-lg font-weight-light"></i></a>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
 
         <!-- First row -->
         <div class="row">
@@ -422,7 +523,7 @@
                   role="button">Figma<i class="fab fa-figma pl-3 fa-lg font-weight-light"></i></a>
                 <a target="_blank"
                   class="nav-link text-dark rounded-pill z-depth-2 waves-effect waves-light font-weight-bold"
-                  href="https://www.canva.com/design/DAFyhfLL6YI/heY-xmhfgpStOtkEYNTkTg/edit" role="button">Canva <i
+                  href="https://www.canva.com/design/DAFyhfLL6YI/heY-xmhfgpStOtkEYNTkTg/edit?utm_content=DAFyhfLL6YI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" role="button">Canva <i
                     class="fas fa-chevron-right pl-3 fa-lg "></i></a>
               </div>
             </div>
@@ -469,7 +570,7 @@
                   role="button">Figma<i class="fab fa-figma pl-3 fa-lg font-weight-light"></i></a>
                 <a target="_blank"
                   class="nav-link text-dark rounded-pill z-depth-2 waves-effect waves-light font-weight-bold"
-                  href="https://www.canva.com/design/DAFybYD9NGc/0o67dXUtdct9w4Y4oRZQag/edit?ui=eyJHIjp7fX0"
+                  href="https://www.canva.com/design/DAFybYD9NGc/0o67dXUtdct9w4Y4oRZQag/edit?utm_content=DAFybYD9NGc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
                   role="button">Canva <i class="fas fa-chevron-right pl-3 fa-lg "></i></a>
               </div>
 
@@ -606,7 +707,7 @@
               </i>
             </a>
             <!--Dribbble-->
-            <a href="https://dribbble.com/mansi_dandgaval" class="pin-ic">
+            <a href="https://dribbble.com/mansi_dandgaval" target="_blank" class="pin-ic">
               <i class="fab fa-dribbble fa-lg white-text fa-3x"> </i>
             </a>
           </div>
