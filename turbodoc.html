@@ -1,7 +1,651 @@
-<iframe loading="lazy"
-    style="position: relative; width: 100%; height: 600px; max-height: 80vh; border: none; padding: 0; margin: 0; overflow: hidden;"
-    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFybYD9NGc&#x2F;SUkwiJ5nxr7bne0KFGvd-Q&#x2F;view?embed"
-    allowfullscreen="allowfullscreen" allow="fullscreen">
-</iframe>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFybYD9NGc&#x2F;SUkwiJ5nxr7bne0KFGvd-Q&#x2F;view?utm_content=DAFybYD9NGc&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
-    target="_blank" rel="noopener">Turbo Doc</a> by Mansi Dandgaval
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Mansi's Portfolio</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('JGIIsthm8eNe_QkkS');
+        })();
+    </script>
+
+    <script>
+
+        function sendmail(params) {
+            // Get input values
+            var toName = document.getElementById("toName").value;
+            var fromName = document.getElementById("fromName").value;
+            var msg = document.getElementById("msg").value;
+            var alerterr = document.getElementById("alerterr");
+            // Validate input
+            if (!toName || !fromName || !msg) {
+                alerterr.innerHTML = "Please fill in all fields.";
+                alerterr.style.backgroundColor = "#FFC0CB"; // Light pink background for error
+                alerterr.style.display = "block";
+                return;
+            }
+            var tempParams = {
+                to_name: toName,
+                from_name: fromName,
+                message: msg,
+            };
+
+
+            emailjs.send('service_0qb8k0m', "template_g1utmhp", tempParams).then(function (res) {
+                // Show success message
+                alerterr.innerHTML = "Email sent successfully!";
+                alerterr.style.backgroundColor = "#90EE90"; // Light green background for success
+                alerterr.style.display = "block";
+                document.getElementById("toName").value = "";
+                document.getElementById("fromName").value = "";
+                document.getElementById("msg").value = "";
+                console.log("success", res.status);
+            })
+        }
+
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth !important;
+        }
+
+        html,
+        body,
+        header,
+        .view {
+            height: 100%;
+        }
+
+        @media (max-width: 740px) {
+
+            html,
+            body,
+            header {
+                /* height: 100vh; */
+            }
+        }
+
+        h1 {
+            /* text-shadow: 2px 2px 5px #000000; */
+        }
+
+        h5 {
+            letter-spacing: 3px;
+        }
+
+        .waves-effect {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        a.waves-effect,
+        a.waves-light {
+            display: inline-block;
+        }
+
+        .btn-rounded {
+            border-radius: 10em;
+        }
+
+        .map-container-section {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+
+        .map-container-section iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        .form-header {
+            padding: 1rem;
+            margin-top: -3.13rem;
+            margin-bottom: 3rem;
+            color: #fff;
+            text-align: center;
+            border-radius: 0.125rem;
+            -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+                0 4px 15px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+                0 4px 15px 0 rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-floating {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            padding: 0;
+            margin: 10px;
+            overflow: hidden;
+            vertical-align: middle;
+            cursor: pointer;
+            border-radius: 50%;
+            -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+                0 4px 15px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+                0 4px 15px 0 rgba(0, 0, 0, 0.15);
+            -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            width: 47px;
+            height: 47px;
+        }
+
+        .btn-floating i {
+            display: inline-block;
+            width: inherit;
+            color: #fff;
+            text-align: center;
+        }
+
+        .btn-floating i {
+            font-size: 1.25rem;
+            line-height: 47px;
+        }
+
+        .view {
+            position: relative;
+            overflow: hidden;
+            cursor: default;
+        }
+
+        .btn-floating-2 {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            padding: 0;
+            margin: 10px;
+            overflow: hidden;
+            vertical-align: middle;
+            cursor: pointer;
+            border-radius: 50%;
+            -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+                0 4px 15px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+                0 4px 15px 0 rgba(0, 0, 0, 0.15);
+            -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            width: 47px;
+            height: 47px;
+        }
+
+        .projects .card .btn-action {
+            margin-top: -1.44rem;
+            margin-bottom: -1.44rem;
+        }
+
+        #alerterr {
+            display: none;
+        }
+
+        .alert2 {
+            color: #383d41;
+            border-color: #d6d8db;
+            position: relative;
+            padding: 0.75rem 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            border-radius: 0.25rem;
+        }
+
+        .card-wrapper .avatar img {
+            width: 100%;
+            background: none repeat scroll 0 0 #fff;
+            border: 5px solid #fff;
+        }
+
+
+        .card-wrapper .avatar {
+            display: block;
+            width: 150px;
+            margin-top: -80px;
+            overflow: hidden;
+        }
+
+        .img-fluid,
+        .modal-dialog.cascading-modal.modal-avatar .modal-header,
+        .video-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .rounded-circle {
+            border-radius: 50% !important;
+        }
+
+        .card-wrapper .card-up {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .custom-letter-spacing {
+            letter-spacing: 7px;
+            /* Adjust as per your requirement */
+        }
+
+        .text-muted-custom {
+            color: #b1b2b3
+        }
+
+        .bg-peagant {
+            background-color: #F0FEF4;
+        }
+
+        .container-fluid {
+            width: 100%;
+            padding-right: 100px;
+            padding-left: 100px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .w-50 {
+            width: 60% !important;
+        }
+
+        .w-50-custom {
+            width: 45%;
+        }
+
+        .custom-text {
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        .custom-text-bold {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .container-fluid {
+                width: 100%;
+                padding-right: 25px;
+                padding-left: 25px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid px-0  mt-4">
+        <nav class="navbar shadow-none navbar-light ">
+            <div class="container-fluid">
+                <a target
+                href="index.html" class=" h2-responsive text-dark"> Mansi Dandgaval </a>
+                <button class="navbar-toggler ml-auto " type="button" data-toggle="collapse"
+                    data-target="#navbarExternalContent" aria-controls="navbarExternalContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+        </nav>
+        <div class="collapse" id="navbarExternalContent">
+            <div class="text-center p-2">
+              <a target="_blank"
+                href="resume.html"
+                class="nav-link text-dark rounded-pill z-depth-1 waves-effect waves-light font-weight-bold mx-2"
+                href="#resume">
+                Resume </a>
+              <a class="nav-link text-dark rounded-pill z-depth-1 waves-effect waves-light font-weight-bold mx-2"
+                href="#projects"> Projects</a>
+              <a class="nav-link text-dark rounded-pill z-depth-1 waves-effect waves-light font-weight-bold mx-2"
+                href="index.html#contact"> Contact</a>
+            </div>
+          </div>
+    </div>
+
+
+    <div class="container-fluid mt-5">
+        <p class="text-muted-custom h5 text-uppercase custom-letter-spacing">Design rationale</p>
+    </div>
+    <section class="projects bg-peagant">
+        <section class="" id="projects">
+            <div class="container py-3">
+                <div class="row ">
+                    <div class=" col-md-5 ">
+                        <img src="./img/projects/turbo-health.png" class="img-fluid w-50" alt="">
+                    </div>
+
+                    <div class="mt-4 col-md-7  align-self-center">
+                        <p class="custom-text-bold">TurboDoc
+                        </p>
+                        <p class="custom-text text-justify">Your convenient online healthcare solution for scheduling
+                            doctor appointments effortlessly.
+                            Take control of your health journey with ease and efficiency.</p>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <div class="container-fluid my-5 py-3 ">
+        <p class="h1">Introduction</p>
+        <hr class="deep-purple accent-2  mt-0 d-inline-block mx-auto" style="width: 110px; height: 5px;">
+        <p class="h5 custom-text">To address widespread healthcare challenges. Many individuals encounter barriers like
+            geographical
+            limitations, transportation issues, long wait times, and limited access to specialists. To overcome these
+            obstacles, we're developing a healthcare consulting app. This platform will enable individuals to connect
+            with healthcare professionals, receive medical advice, and schedule remote consultations, enhancing
+            accessibility and convenience</p>
+    </div>
+
+    <section class="projects bg-peagant">
+        <section class="" id="projects">
+            <div class="container py-3">
+                <div class="row ">
+                    <div class=" col-md-6 ">
+                        <p class="h1">Target audience</p>
+                        <hr class="deep-purple accent-2  mt-0 d-inline-block mx-auto"
+                            style="width: 110px; height: 5px;">
+                        <p class="h5 custom-text">Healthcare providers and customers</p>
+                        <ul class="custom-text">
+                            <li>
+                                Healthcare providers include - Practitioners of any kind - Doctors, nutritionists, Lab
+                                Centers and Diagnostics
+                            </li>
+                            <li>
+                                Healthcare providers include - Practitioners of any kind - Doctors, nutritionists, Lab
+                                Centers and Diagnostics
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class=" col-md-6 ">
+                        <p class="h1">Link to design</p>
+                        <hr class="deep-purple accent-2  mt-0 d-inline-block mx-auto"
+                            style="width: 110px; height: 5px;">
+                        <p class="h5 custom-text"><a target="_blank" href="https://www.figma.com/proto/GThikR8fDfy6PQDsPzuYAv/Turbo-Doc?page-id=0%3A1&node-id=1-2229&viewport=718%2C476%2C0.1&t=djRox0XzMkiO9nF9-1&scaling=min-zoom&starting-point-node-id=1%3A2229&show-proto-sidebar=1">[link to final design files]</a> </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <div class="container-fluid my-5 py-3 ">
+        <p class="h1">The Problem </p>
+        <hr class="deep-purple accent-2  mt-0 d-inline-block mx-auto" style="width: 110px; height: 5px;">
+        <p class="h5 custom-text">How might we create an online healthcare app that enables users to easily schedule
+            appointments and connect with healthcare professionals from anywhere?</p>
+    </div>
+
+    <div class="container-fluid my-5 py-3 ">
+        <p class="h1">User Research</p>
+        <hr class="deep-purple accent-2  mt-0 d-inline-block mx-auto" style="width: 110px; height: 5px;">
+        <p class="h5 custom-text">Conducted user research and initiated the design process with empathy mapping and
+            persona development</p>
+    </div>
+
+   <div class="container">
+    <div class="row">
+        <div class="col-md">
+            <img src="./img/turbo/empathy.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-md">
+            <img src="./img/turbo/pesonas.jpg" class="img-fluid" alt="">
+        </div>
+    </div>
+
+    <div class="row my-3">
+        <div class="col-md">
+            <img src="./img/turbo/usecase1.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-md">
+            <img src="./img/turbo/usecase2.jpg" class="img-fluid" alt="">
+        </div>
+    </div>
+   </div>
+    
+    <div class="p-4">
+        <hr class="grey lighten-1">
+    </div>
+    <!-- Footer -->
+    <section class="projects mb-5 " id="projects">
+        <div class="container my-5">
+            <!-- Section: Block Content -->
+            <section class="dark-grey-text">
+                <h3 class="text-center font-weight-bold mb-4 pb-2">
+                    More Case Studies
+                </h3>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card"> <iframe height="300px"
+                                src="https://www.youtube.com/embed/jXuv1fZZHiM?si=guleicVN4yXqOjGM&amp;controls=0"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+
+                            <div class="card-body">
+                                <h4 class="card-title">Musik App- Product Design</h4>
+                                <hr />
+                                <p class=" card-text text-muted font-weight-light ">
+                                    Revamped the Musik app with a user-centric design, meeting the requirement to
+                                    incorporate a lyrics
+                                    screen. Witness the seamless integration of the new design, maintaining a consistent
+                                    color theme and
+                                    employing high-fidelity prototypes.
+                                </p>
+                                <hr>
+                                <a target="_blank"
+                                    class="nav-link text-dark rounded-pill z-depth-2 waves-effect waves-light mx-2 font-weight-bold"
+                                    href="https://dribbble.com/shots/23314720-Accenture-North-America-Product-Design-virtual-experience?utm_source=Clipboard_Shot&utm_campaign=mansi_dandgaval&utm_content=Accenture%20North%20America%20Product%20Design%20virtual%20experience&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=mansi_dandgaval&utm_content=Accenture%20North%20America%20Product%20Design%20virtual%20experience&utm_medium=Social_Share"
+                                    role="button">Design<i class="fab fa-dribbble pl-3 fa-lg font-weight-light"></i></a>
+                                <a target="_blank"
+                                    class="nav-link text-dark rounded-pill z-depth-2 waves-effect waves-light font-weight-bold"
+                                    href="./musik.html" role="button"> Case Study <i
+                                        class="fas fa-chevron-right pl-3 fa-lg "></i></a>
+                                </hr>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <div class="card"> <iframe height="300px"
+                                src="https://www.youtube.com/embed/6SI2_V9zOz8?si=0u6w9fM6KF9pz0ps"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+
+                            <div class="card-body">
+                                <h4 class="card-title">Agent Bene- Game </h4>
+                                <hr />
+                                <p class=" card-text text-muted font-weight-light ">
+                                    This video shows the game's initial stage of development, focusing on its
+                                    foundational design phase.
+                                    Agent Bene represents the initial stage of development, currently in progress. This
+                                    provides a broad
+                                    overview of the envisioned game concept.
+                                </p>
+                                <hr>
+                                <a target="_blank"
+                                    class="nav-link text-dark rounded-pill z-depth-2 waves-effect waves-light mx-2 font-weight-bold"
+                                    href="https://mansi-dandgaval.itch.io/agent-bene" role="button">Play The Game<i
+                                        class="fab fa-itch-io pl-3 fa-lg font-weight-light"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- First row -->
+                <div class="row">
+                    <!-- First column -->
+
+                    <div class="col-md-6 mb-4">
+                        <!-- Card -->
+                        <div class="card">
+                            <div class="view overlay">
+                                <img class="card-img-top" src="./img/projects/turbodoc.png" alt="Card image cap" />
+                                <a target="_blank"
+                                    href="https://www.canva.com/design/DAFybYD9NGc/0o67dXUtdct9w4Y4oRZQag/edit?ui=eyJHIjp7fX0">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!-- <a target="_blank"
+                        href="https://www.figma.com/proto/OYaA6y8ebvS8cX7LTIw4BF/Portfolio?node-id=28:60&starting-point-node-id=2:2&show-proto-sidebar=1&utm_source=figma"
+                        class="btn-floating btn-action ml-auto mr-5 unique-color-dark" style="margin-right: 4rem !important"><i
+                          class="fab fa-figma pl-1"></i></a>
+        
+                      <a target="_blank"
+                        href="https://www.canva.com/design/DAFybYD9NGc/0o67dXUtdct9w4Y4oRZQag/edit?ui=eyJHIjp7fX0"
+                        class="btn-floating btn-action ml-auto mr-2 unique-color-dark"><i
+                          class="fas fa-chevron-right pl-1"></i></a> -->
+
+                            <div class="card-body">
+                                <h4 class="card-title">Turbo Doc</h4>
+                                <hr />
+                                <p class="card-text text-muted font-weight-light">
+                                    Turbo Doc App Prototype is a user-centric, interactive Figma
+                                    prototype designed in such a way that patients access
+                                    healthcare services and consult with medical professionals.
+                                    This innovative application aims to bridge the gap between
+                                    patients and healthcare providers, offering a seamless,
+                                    user-friendly, and secure platform for virtual consultations
+                                    and health management.
+                                </p>
+                                <hr>
+                                <a target="_blank"
+                                    class="nav-link text-dark rounded-pill z-depth-2 waves-effect waves-light mx-2 font-weight-bold"
+                                    href="https://www.figma.com/proto/Y2W533QhzrPIRh3W9sfkKc/Turbo-Doc--Final-Project?type=design&node-id=7-8&t=WG2DV2jztOiCsh7c-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=7%3A8&show-proto-sidebar=1&mode=design"
+                                    role="button">Design<i class="fab fa-figma pl-3 fa-lg font-weight-light"></i></a>
+                                <a target="_blank"
+                                    class="nav-link text-dark rounded-pill z-depth-2 waves-effect waves-light font-weight-bold"
+                                    href="https://www.canva.com/design/DAFybYD9NGc/0o67dXUtdct9w4Y4oRZQag/edit?utm_content=DAFybYD9NGc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                    role="button">Case Study <i class="fas fa-chevron-right pl-3 fa-lg "></i></a>
+                            </div>
+
+                        </div>
+                        <!-- Card -->
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="view overlay">
+                                <img class="card-img-top img-fluid" src="./img/projects/css&sass.png"
+                                    alt="Card image cap" />
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                                <div class="card-body">
+                                    <h4 class="card-title">Exploring the Impact of CSS and Sass</h4>
+                                    <hr />
+                                    <p class="card-text text-muted font-weight-light">
+
+                                        Practiced designing and developing a website, "Modern Apartments," to explore
+                                        the impact of CSS and
+                                        Sass on its appearance and overall feel, comparing the version with and without
+                                        styling.
+                                    </p>
+                                    <hr>
+                                    <a target="_blank"
+                                        class="nav-link text-dark rounded-pill z-depth-2 waves-effect waves-light mx-2 font-weight-bold"
+                                        href="https://github.com/mansiDandgaval/Exploring-the-Impact-of-CSS-and-Sass"
+                                        role="button">GitHub<i
+                                            class="fab fa-github fa-lg pl-3 fa-lg font-weight-light"></i></a>
+                                    <a target="_blank"
+                                        class="nav-link text-dark rounded-pill z-depth-2 waves-effect waves-light font-weight-bold"
+                                        href="https://www.canva.com/design/DAF1Z0hXA6M/8kLZSBhra1G1bPxYWiEkTw/edit?utm_content=DAF1Z0hXA6M&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                                        role="button">Case Study<i class="fas fa-chevron-right pl-3 fa-lg "></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section: Block Content -->
+        </div>
+    </section>
+
+
+    <footer class="page-footer font-small bg-dark">
+        <!-- Footer Elements -->
+        <div class="container">
+            <!-- Grid row-->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-12 py-4">
+                    <div class="mb-5 flex-center">
+                        <!--Linkedin -->
+                        <a href="https://www.linkedin.com/in/mansi-dandgaval/" target="_blank" class="li-ic">
+                            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-4 fa-3x">
+                            </i>
+                        </a>
+                        <!--Git-->
+                        <a href="https://github.com/mansiDandgaval/" target="_blank" class="ins-ic">
+                            <i class="fab fa-github fa-lg white-text mr-md-5 mr-4 fa-3x">
+                            </i>
+                        </a>
+                        <!--Dribbble-->
+                        <a href="https://dribbble.com/mansi_dandgaval" target="_blank" class="pin-ic">
+                            <i class="fab fa-dribbble fa-lg white-text fa-3x"> </i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row-->
+        </div>
+        <!-- Footer Elements -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            © forever Copyright:
+            <a href="#home"> Mansi Dandgaval</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>
